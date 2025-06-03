@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block header %}
+    {% if post %}
+        <h1>{{ post.title }}</h1>
+        <p style="font-size: small;">{{ post.pub_date }}</p>
+    {% else %}
+        <h1>Post not found.</h1>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if post %}
+        {{ post.content|linebreaks }}
+    {% endif %}
+    <br>
+    <a href="/">Go to the index</a>
+{% endblock %}
