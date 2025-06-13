@@ -6,7 +6,7 @@ from .models import Post
 
 def blog_main(request):
     template = loader.get_template("main.html")
-    return HttpResponse(template.render({ "posts": Post.objects.all() }))
+    return HttpResponse(template.render({ "posts": Post.objects.all().order_by("pub_date").reverse() }))
 
 def post(request, id):
     template = loader.get_template("post.html")

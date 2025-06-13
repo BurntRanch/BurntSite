@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
 <body>
 
-<div>
+<div id="title" class="center">
 {% block header %}
     <h1>Hello, welcome!</h1>
+    <br>
     <p>Welcome to my website!</p>
 {% endblock %}
 </div>
@@ -16,7 +20,7 @@
     {% if posts|length > 0 %}
         <ol id="posts">
         {% for post in posts %}
-            <a href="/blog/post/{{ post.uid }}"><h3 style="display: inline;">{{ post.title }}</h3></a> <p style="display: inline; font-size: small; padding-left: 10px;">{{ post.pub_date }}</p>
+            <a href="/blog/post/{{ post.uid }}"><h3 style="display: inline;">"{{ post.title }}"</h3></a> <p style="display: inline; font-size: small; padding-left: 10px;">{{ post.pub_date }}</p>
             <br>
         {% endfor %}
         </ol>
@@ -25,6 +29,8 @@
     {% endif %}
 {% endblock %}
 </div>
+
+<a href="https://github.com/BurntRanch" class="button bottom-left">Developed with &lt;3 in the open!</a>
 
 </body>
 </html>

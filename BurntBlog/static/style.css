@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'AdwaitaMono';
+    src: url("AdwaitaMono-Regular.ttf") format("truetype");
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.button {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+html {
+    background-color: #1a1a1a;
+}
+
+h1, h2, h3, p, a {
+    color: #fafafa;
+    font-family: 'AdwaitaMono';
+}
+
+a {
+    text-decoration-style: wavy;
+    text-decoration-color: #fafafa;
+    text-underline-offset: 2px;
+}
+
+#title, #post-content {
+    background-color: #1f1f1f;
+    border-radius:10px;
+}
+
+#post-content {
+    width: 75%;
+    padding-inline: 10px;
+}
+
+#title h1, #title p, #title a {
+    display: inline;
+    background-clip: border-box;
+    width: max-content;
+    padding-inline: 5px;
+    text-align: center;
+}
+
+#title h1 {
+    background-color: #2f2f2f;
+    border-radius: 10px;
+}
+
+#title a {
+    padding-bottom: 10px;
+}
