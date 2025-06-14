@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
 ]
+
+if DEBUG:
+    INSTALLED_APPS.append('django.contrib.staticfiles')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
