@@ -52,6 +52,10 @@ a {
     padding-inline: 10px;
 }
 
+#post-content p {
+    text-align: start;
+}
+
 #title h1, #title p, #title a {
     display: inline;
     background-clip: border-box;
