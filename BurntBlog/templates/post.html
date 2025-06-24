@@ -14,8 +14,9 @@
     {% if post %}
         <div class="center">
             <div id="post-content"><p>{{ post.content|linebreaks }}</p></div>
+            <span>
+            <a class="button" href="/">Index</a>
+            </span>
         </div>
-        <br>
-        <a class="button" href="/">Index</a>
     {% endif %}
 {% endblock %}
