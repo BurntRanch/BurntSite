@@ -13,7 +13,9 @@
 {% block content %}
     {% if post %}
         <div class="center">
-            <div id="post-content">{{ post.content|safe|linebreaks }}</div>
+            {% autoescape off %}
+            <div id="post-content">{{ post.content|linebreaksbr }}</div>
+            {% endautoescape %}
             <span>
             <a class="button" href="/">Index</a>
             </span>
