@@ -13,24 +13,28 @@
 {% endblock %}
 </div>
 
-<div style="padding-top: 15px;">
-{% block content %}
-    <h3>Here are some blog posts you might like:</h3>
+<div id="page-container">
+    <div id="content-wrap" style="padding-top: 15px;">
+    {% block content %}
+        <h3>Here are some blog posts you might like:</h3>
 
-    {% if posts|length > 0 %}
-        <ol id="posts">
-        {% for post in posts %}
-            <a href="/blog/post/{{ post.uid }}"><h3 style="display: inline;">"{{ post.title }}"</h3></a> <p style="display: inline; font-size: small; padding-left: 10px;">{{ post.pub_date }}</p>
-            <br>
-        {% endfor %}
-        </ol>
-    {% else %}
-        <p>No posts yet..</p>
-    {% endif %}
-{% endblock %}
+        {% if posts|length > 0 %}
+            <ol id="posts">
+            {% for post in posts %}
+                <a href="/blog/post/{{ post.uid }}"><h3 style="display: inline;">"{{ post.title }}"</h3></a> <p style="display: inline; font-size: small; padding-left: 10px;">{{ post.pub_date }}</p>
+                <br>
+            {% endfor %}
+            </ol>
+        {% else %}
+            <p>No posts yet..</p>
+        {% endif %}
+    {% endblock %}
+    </div>
+    <footer id="footer">
+        <a href="https://github.com/BurntRanch/BurntSite" class="button">Developed with &lt;3 in the open!</a>
+        <a href="/privacy-policy" class="button">Privacy Policy</a>
+    </footer>
 </div>
-
-<a href="https://github.com/BurntRanch/BurntSite" class="button bottom-left">Developed with &lt;3 in the open!</a>
 
 </body>
 </html>

@@ -19,3 +19,7 @@ def post(request, id):
         pass
 
     return HttpResponse(template.render({ "post" : post }))
+
+def privacy_policy(request):
+    template = loader.get_template("privacy-policy.html")
+    return HttpResponse(template.render())
