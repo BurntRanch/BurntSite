@@ -17,6 +17,12 @@
     padding: 10px;
 }
 
+@media screen and (max-width: 1200px) {
+  .button {
+     size: 20px;
+  }
+}
+
 .left {
     position: fixed;
     bottom: 0;
@@ -48,6 +54,12 @@ h1, h2, h3, p, a, #post-content {
 
 #post-content {
     font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  #post-content {
+     font-size: 15px;
+  }
 }
 
 a {
