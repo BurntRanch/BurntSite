@@ -10,4 +10,3 @@ class Post(models.Model):
 class Image(models.Model):
     uid = models.UUIDField("UID", primary_key=True, default=uuid4, unique=True, editable=False)
     content = models.ImageField("Image", upload_to='images')
-    subtitle = models.CharField("Subtitle")
