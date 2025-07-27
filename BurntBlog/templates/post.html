@@ -1,5 +1,7 @@
 {% extends "main.html" %}
 
+{% if post %}{% block title %}{{ post.title }}{% endblock %}{% endif %}
+
 {% block header %}
     {% if post %}
         <h1>{{ post.title }}</h1>
