@@ -88,6 +88,10 @@ a {
     border-radius:10px;
 }
 
+#post-content img {
+    max-width: 75%;
+}
+
 #post-content {
     width: 75%;
     padding: 10px;
