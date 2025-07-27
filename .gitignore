@@ -1,5 +1,7 @@
 .env
 .venv
 db.sqlite3
+images/*
+migrations
 
 __pycache__

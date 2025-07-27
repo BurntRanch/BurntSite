@@ -17,12 +17,6 @@
     padding: 10px;
 }
 
-@media screen and (max-width: 1200px) {
-  .button {
-     size: 20px;
-  }
-}
-
 .left {
     position: fixed;
     bottom: 0;
