@@ -1,10 +1,10 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.template import loader
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
-from .models import Image, Post
+from .models import Post, Image
 
 def blog_main(_):
-    template = loader.get_template("main.html")
+    template = loader.get_template("blog_index.html")
     return HttpResponse(template.render({ "posts": Post.objects.all().order_by("pub_date").reverse() }))
 
 def post(_, id):
@@ -19,12 +19,8 @@ def post(_, id):
 
     return HttpResponse(template.render({ "post" : post }))
 
-def privacy_policy(_):
-    template = loader.get_template("privacy-policy.html")
-    return HttpResponse(template.render())
-
 def image(_, id):
-    img: Image = None
+    img = None
 
     try:
         img = Image.objects.get(uid=id)

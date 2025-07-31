@@ -1,6 +1,6 @@
 {% extends "main.html" %}
 
-{% if post %}{% block title %}{{ post.title }}{% endblock %}{% endif %}
+{% block title %}{% if post %}{{ post.title }}{% else %}Post not found{% endif %}{% endblock %}
 
 {% block header %}
     {% if post %}
@@ -8,7 +8,7 @@
         <p>{{ post.pub_date }} UTC</p>
     {% else %}
         <h1>Post not found.</h1>
-        <a href="/">Go back to the index.</a>
+        <a href="/blog">Go back to the index.</a>
     {% endif %}
 {% endblock %}
 
@@ -19,7 +19,7 @@
             <div id="post-content">{{ post.content|linebreaksbr }}</div>
             {% endautoescape %}
             <span>
-            <a class="button" href="/">Index</a>
+            <a class="button" href="/blog">Index</a>
             </span>
         </div>
     {% endif %}

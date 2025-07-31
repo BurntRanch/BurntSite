@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}BurntBlog{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="BurntRanch's pretty-sick blog!"/>
     <link rel="stylesheet" href="/static/style.css">
@@ -10,27 +10,12 @@
 
 <div id="title" class="center">
 {% block header %}
-    <h1>Hello, welcome!</h1>
-    <br>
-    <p>Welcome to my website!</p>
 {% endblock %}
 </div>
 
 <div id="page-container">
     <div id="content-wrap" style="padding-top: 15px;">
     {% block content %}
-        <h3>Here are some blog posts you might like:</h3>
-
-        {% if posts|length > 0 %}
-            <ol id="posts">
-            {% for post in posts %}
-                <a href="/blog/post/{{ post.uid }}"><h3 style="display: inline;">"{{ post.title }}"</h3></a> <p style="display: inline; font-size: small; padding-left: 10px;">{{ post.pub_date }}</p>
-                <br>
-            {% endfor %}
-            </ol>
-        {% else %}
-            <p>No posts yet..</p>
-        {% endif %}
     {% endblock %}
     </div>
     <footer id="footer">
